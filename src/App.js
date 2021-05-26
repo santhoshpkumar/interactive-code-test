@@ -1,5 +1,4 @@
 /* eslint-disable require-jsdoc */
-// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 
