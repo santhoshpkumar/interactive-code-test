@@ -19,7 +19,9 @@
         "lint": "eslint ./",
         "lint:fix": "eslint ./ --fix",
         "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "docker-start": "docker-compose up -d --build",
+        "docker-stop": "docker-compose stop"
     },
     "eslintConfig": {
         "extends": [
