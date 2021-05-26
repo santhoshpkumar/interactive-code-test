@@ -7,40 +7,40 @@ export default function ProductListing() {
     return (
         <Grid align="center">
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={4}>
-                <Image src={faker.image.image()} />
+                <Image src={faker.image.food()} />
             </Grid.Column>
         </Grid>
     );
