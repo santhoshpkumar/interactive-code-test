@@ -11,7 +11,7 @@ export default function App() {
             <br />
             <TopHeader />
             <TopMenuBar />
-            <ProductListing />;
+            <ProductListing />
         </Container>
     );
 }

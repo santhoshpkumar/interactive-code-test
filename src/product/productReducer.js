@@ -1,4 +1,6 @@
 /* eslint-disable require-jsdoc */
+import productDate from './../api/data';
+
 const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
 // const UPDATE_FILTER = 'UPDATE_FILTER';
 // const UPDATE_SEARCH = 'UPDATE_SEARCH';
@@ -12,7 +14,7 @@ export function fetchProducts(payload) {
     };
 }
 
-const initialState = { products: [], filters: [], search: '' };
+const initialState = { products: productDate, filters: [], search: '' };
 
 export default function productReducer(state = initialState, { type, payload }) {
     switch (type) {
