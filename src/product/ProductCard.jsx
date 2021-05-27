@@ -8,27 +8,27 @@ export default function ProductListing({ product }) {
     const { isSale, productImage, productName, type, price } = product;
     return (
         <Card>
-            {isSale ? (
-                <Image
-                    label={{
-                        as: 'a',
-                        corner: 'left',
-                        color: 'red',
-                        content: 'Sale',
-                    }}
-                    src={productImage ? productImage : faker.image.food()}
-                    wrapped
-                    ui={false}
-                />
-            ) : (
-                <Image src={productImage ? productImage : faker.image.food()} wrapped ui={false} />
-            )}
+            <Image
+                src={productImage ? productImage : faker.image.food()}
+                label={
+                    isSale
+                        ? {
+                              as: 'a',
+                              corner: 'left',
+                              color: 'red',
+                              content: 'Sale',
+                          }
+                        : null
+                }
+                wrapped
+                ui={false}
+            />
             <Card.Content>
                 <Card.Meta>{type}</Card.Meta>
                 <Card.Description>{productName}</Card.Description>
             </Card.Content>
             <Card.Content extra>
-                <Icon name="tag" />
+                <Icon name={isSale ? 'tags' : 'tag'} color={isSale ? 'red' : null} />
                 {price}
             </Card.Content>
         </Card>
