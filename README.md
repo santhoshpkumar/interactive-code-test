@@ -6,9 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### Installing
+
+`yarn` - Install all the dependencies for the web app
+
+### Funning Locally
+
 ### `yarn start` or `yarn docker-start`
 
-You have 2 options to Run the app in the development mode.\
+You have 2 options to Run the app in the development mode locally.\
 if using yarn start
 , Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
@@ -22,8 +28,10 @@ Using the Docker option you can perfrom your development using the docker contia
 
 ### `yarn docker-stop`
 
-If you use docker-star then please remember to call docerk-stop to bring down the container.
+If you use docker-star then please remember to call docker-stop to bring down the container.
 Failure to do so will result in unable to launch again and must stop/kill the continer instance using docker commands.
+
+### Unit tests
 
 ### `yarn test:watch`
 
@@ -33,6 +41,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `yarn test:coverage`
 
 Provides a code coverage report. Look for detailed code coverage report under /coverage folder.
+
+### Build & Maintainance
 
 ### `yarn build`
 
@@ -61,3 +71,11 @@ You can lint your code using the lint option. additionally you can use the `yarn
 ### `yarn format`
 
 The proejct uses prettier format to format and beautify the code.
+
+## Project Structure
+
+TODO
+
+## Outstanding Issues
+
+TODO
