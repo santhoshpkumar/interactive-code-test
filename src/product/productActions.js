@@ -18,3 +18,10 @@ export function updateFilter(filterBy) {
         payload: filterBy,
     };
 }
+
+export function fetchProducts(payload) {
+    return {
+        type: FETCH_PRODUCTS,
+        payload,
+    };
+}

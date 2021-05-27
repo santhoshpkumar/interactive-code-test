@@ -1,5 +1,5 @@
-import { updateSearchText, updateFilter } from './productActions';
-import { UPDATE_FILTER, UPDATE_SEARCH_TEXT } from './productActions';
+import { updateSearchText, updateFilter, fetchProducts } from './productActions';
+import { UPDATE_FILTER, UPDATE_SEARCH_TEXT, FETCH_PRODUCTS } from './productActions';
 
 describe('actions', () => {
     it('should create an action to update search text', () => {
@@ -17,5 +17,13 @@ describe('actions', () => {
             payload: filters,
         };
         expect(updateFilter(filters)).toEqual(expectedAction);
+    });
+    it('should create an action to fetch products', () => {
+        const products = ['product', 'product2'];
+        const expectedAction = {
+            type: FETCH_PRODUCTS,
+            payload: products,
+        };
+        expect(fetchProducts(products)).toEqual(expectedAction);
     });
 });
