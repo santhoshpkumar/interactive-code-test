@@ -1,11 +1,6 @@
 /* eslint-disable require-jsdoc */
+import { FETCH_PRODUCTS, UPDATE_SEARCH_TEXT } from './productActions';
 import productDate from './../api/data';
-
-const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
-// const UPDATE_FILTER = 'UPDATE_FILTER';
-// const UPDATE_SEARCH = 'UPDATE_SEARCH';
-// const CLEAR_SEARCH = 'CLEAR_SEARCH';
-// const CLEAR_FILTER = 'CLEAR_FILTER';
 
 export function fetchProducts(payload) {
     return {
@@ -14,7 +9,7 @@ export function fetchProducts(payload) {
     };
 }
 
-const initialState = { products: productDate, filters: [], search: '' };
+const initialState = { products: productDate, filters: [], searchText: 'test' };
 
 export default function productReducer(state = initialState, { type, payload }) {
     switch (type) {
@@ -22,6 +17,11 @@ export default function productReducer(state = initialState, { type, payload }) 
             return {
                 ...state,
                 products: payload,
+            };
+        case UPDATE_SEARCH_TEXT:
+            return {
+                ...state,
+                searchText: payload,
             };
 
         default:
