@@ -1,5 +1,5 @@
 /* eslint-disable require-jsdoc */
-import { FETCH_PRODUCTS, UPDATE_SEARCH_TEXT } from './productActions';
+import { FETCH_PRODUCTS, UPDATE_SEARCH_TEXT, UPDATE_FILTER } from './productActions';
 import productDate from './../api/data';
 
 export function fetchProducts(payload) {
@@ -9,7 +9,7 @@ export function fetchProducts(payload) {
     };
 }
 
-const initialState = { products: productDate, filters: [], searchText: 'test' };
+const initialState = { products: productDate, filters: [], searchText: '' };
 
 export default function productReducer(state = initialState, { type, payload }) {
     switch (type) {
@@ -23,7 +23,11 @@ export default function productReducer(state = initialState, { type, payload }) 
                 ...state,
                 searchText: payload,
             };
-
+        case UPDATE_FILTER:
+            return {
+                ...state,
+                filters: payload,
+            };
         default:
             return state;
     }

@@ -22,3 +22,12 @@ code {
   ) !important;
   height: 5vh;
 }
+
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

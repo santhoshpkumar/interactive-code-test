@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Input, Grid, Select } from 'semantic-ui-react';
-import { updateSearchText } from './../product/productActions';
+import { updateSearchText, updateFilter } from './../product/productActions';
 import * as _ from 'lodash';
 
 export default function TopMenuBar() {
@@ -28,13 +28,19 @@ export default function TopMenuBar() {
                     icon="search"
                     placeholder="Search..."
                     value={searchText}
-                    onChange={(e, d) => {
-                        dispatch(updateSearchText(d.value));
+                    onChange={(event, data) => {
+                        dispatch(updateSearchText(data.value));
                     }}
                 />
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={8} align="end">
-                <Select placeholder="Filter By" options={filterOptions} fluid multiple />
+                <Select
+                    placeholder="Filter By"
+                    options={filterOptions}
+                    fluid
+                    multiple
+                    onChange={(event, data) => dispatch(updateFilter(data.value))}
+                />
             </Grid.Column>
         </Grid>
     );

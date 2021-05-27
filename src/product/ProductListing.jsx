@@ -5,19 +5,24 @@ import { Grid } from 'semantic-ui-react';
 import ProductCard from './ProductCard';
 
 export default function ProductListing() {
-    const { products, searchText } = useSelector((state) => state.product);
+    const { products, searchText, filters } = useSelector((state) => state.product);
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
-        if (searchText) {
-            const productsList = products.filter((product) => {
+        let productsList = [...products];
+        if (filters.length > 0) {
+            productsList = productsList.filter((product) => {
+                return filters.includes(product.type);
+            });
+        }
+        if (searchText.length > 0) {
+            productsList = productsList.filter((product) => {
                 return product.productName.toLowerCase().includes(searchText.toLowerCase());
             });
             setFilteredProducts(productsList);
-        } else {
-            setFilteredProducts(products);
         }
-    }, [searchText, products]);
+        setFilteredProducts(productsList);
+    }, [searchText, products, filters]);
 
     return (
         <Grid align="center">
