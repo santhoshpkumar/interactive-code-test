@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Input, Grid, Select } from 'semantic-ui-react';
 import { updateSearchText, updateFilter } from './../product/productActions';
-import * as _ from 'lodash';
+import uniqBy from 'lodash/uniqBy';
 
 export default function TopMenuBar() {
     const [filterOptions, setFilterOptions] = useState([]);
@@ -16,7 +16,7 @@ export default function TopMenuBar() {
             value: product.type,
             text: product.type,
         }));
-        const newOptions = _.uniqBy(options, 'key');
+        const newOptions = uniqBy(options, 'key');
         setFilterOptions(newOptions);
     }, [products]);
 
@@ -35,6 +35,7 @@ export default function TopMenuBar() {
             </Grid.Column>
             <Grid.Column mobile={16} tablet={8} computer={8} align="end">
                 <Select
+                    data-testid="dropdown"
                     placeholder="Filter By"
                     options={filterOptions}
                     fluid

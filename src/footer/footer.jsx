@@ -2,6 +2,6 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react';
 
-const Footer = () => <Container className="footer"></Container>;
-
-export default Footer;
+export default function Footer() {
+    return <Container className="footer">Interative Code Test</Container>;
+}
