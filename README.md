@@ -78,4 +78,5 @@ TODO
 
 ## Outstanding Issues
 
-TODO
+i18n - add language support for internationalisation
+a11y - valdiate all component have valid aria label
