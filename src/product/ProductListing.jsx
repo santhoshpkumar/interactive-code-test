@@ -31,7 +31,7 @@ export default function ProductListing() {
                 filteredProducts.map((product) => {
                     return (
                         <Grid.Column key={product.index} mobile={16} tablet={8} computer={4}>
-                            <ProductCard product={product} />
+                            <ProductCard key={product.index} product={product} />
                         </Grid.Column>
                     );
                 })

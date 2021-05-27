@@ -34,4 +34,16 @@ describe('products reducer', () => {
             filters: filters,
         });
     });
+
+    it('should handle FETCH_PRODUCTS', () => {
+        const products = [{ product: 'product' }];
+        expect(
+            reducer([], {
+                type: types.FETCH_PRODUCTS,
+                payload: products,
+            }),
+        ).toEqual({
+            products: products,
+        });
+    });
 });
