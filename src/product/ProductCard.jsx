@@ -2,14 +2,14 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
 import { Image, Card, Icon } from 'semantic-ui-react';
-import faker from 'faker';
 
 export default function ProductListing({ product }) {
     const { isSale, productImage, productName, type, price } = product;
     return (
         <Card>
             <Image
-                src={productImage ? productImage : faker.image.food()}
+                alt="Product Image"
+                src={productImage ? productImage : null}
                 label={
                     isSale
                         ? {

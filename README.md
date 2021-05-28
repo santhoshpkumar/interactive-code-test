@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+App Demo: [interactivecode.ml](https://interactivecode.ml)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -10,26 +12,26 @@ In the project directory, you can run:
 
 `yarn` - Install all the dependencies for the web app
 
-### Funning Locally
+### Running Locally
 
-### `yarn start` or `yarn docker-start`
+### `yarn start` ~~or `yarn docker-start`~~
 
-You have 2 options to Run the app in the development mode locally.\
-if using yarn start
+You Run the app in the development mode locally.\
+by using yarn start
 , Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-if using yarn docker start
-, Open [http://localhost:8443](http://localhost:8443) to view it in browser.
+~~if using yarn docker start
+, Open [http://localhost:8443](http://localhost:8443) to view it in browser.~~
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-Using the Docker option you can perfrom your development using the docker contianer.
+~~Using the Docker option you can perfrom your development using the docker contianer.~~
 
-### `yarn docker-stop`
+### ~~`yarn docker-stop`~~
 
-If you use docker-star then please remember to call docker-stop to bring down the container.
-Failure to do so will result in unable to launch again and must stop/kill the continer instance using docker commands.
+~~If you use docker-star then please remember to call docker-stop to bring down the container.
+Failure to do so will result in unable to launch again and must stop/kill the continer instance using docker commands.~~
 
 ### Unit tests
 
@@ -70,13 +72,32 @@ You can lint your code using the lint option. additionally you can use the `yarn
 
 ### `yarn format`
 
-The proejct uses prettier format to format and beautify the code.
+This proejct uses prettier format to format and beautify the code.
 
 ## Project Structure
 
-TODO
+![Image of project folder structure](./docs/projectstructure.png)
+
+`Redux` is used for state management `store` folder has the code for adding the store to the app,
+
+`product` folder has all code related to product listing, product card, no results found and the product reducer and product actions.
+
+`header` folder have the search and filter dropdown
+
+`api` folder has all the static product data
+
+`indes.jsx` loads `app` component
+
+### File Naming Convention
+
+- All JSX files to end with extenion `jsx`
+- Pure js functions with no react dependency use `js ` extension
+- File name to begin with Captalised Letter if the file exports a default module
 
 ## Outstanding Issues
 
-i18n - add language support for internationalisation
-a11y - valdiate all component have valid aria label
+- i18n - add language support for internationalisation
+- a11y - valdiate all component have valid aria label
+- docker - fix the docker image to laod react and its depedencies
+- npm audit - no attempt has been made to fix the npm audit errors
+- test coverage - current threshold is set to `85%` but 95% is be desired
