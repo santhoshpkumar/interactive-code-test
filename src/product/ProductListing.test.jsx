@@ -63,4 +63,14 @@ describe('test ProductListing Component', () => {
         expect(getByText('aaaaaaaaa')).not.toBeNull();
         expect(queryByText('bbbbbbbbb')).toBeNull();
     });
+
+    test('renders no product found message', () => {
+        useSelectorMock.mockReturnValue({
+            products: [],
+            filters: [],
+            searchText: '',
+        });
+        const { getByText } = render(<ProductListing />);
+        expect(getByText('No matching products found.')).not.toBeNull();
+    });
 });
