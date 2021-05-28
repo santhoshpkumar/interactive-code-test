@@ -93,6 +93,7 @@ This proejct uses prettier format to format and beautify the code.
 - All JSX files to end with extenion `jsx`
 - Pure js functions with no react dependency use `js ` extension
 - File name to begin with Captalised Letter if the file exports a default module
+- folder name to be use camecase notation
 
 ## Outstanding Issues
 
