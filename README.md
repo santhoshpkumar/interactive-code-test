@@ -98,7 +98,7 @@ This proejct uses prettier format to format and beautify the code.
 ## Outstanding Issues
 
 - i18n - add language support for internationalisation
-- a11y - valdiate all component have valid aria label, add jst test util `jest-axe`
+- a11y - valdiate all component have valid aria label, add jest test util `jest-axe`
 - docker - fix the docker image to laod react and its depedencies
 - npm audit - no attempt has been made to fix the npm audit errors
-- test coverage - current threshold is set to `85%` but 95% is be desired
+- test coverage - current threshold is set to `85%` but 95% is desired
