@@ -76,7 +76,9 @@ This proejct uses prettier format to format and beautify the code.
 
 ## Project Structure
 
-![Image of project folder structure](./docs/projectstructure.png)
+<img src="./docs/projectstructure.png
+" alt="Project folder structure
+" width="200"/>
 
 `Redux` is used for state management `store` folder has the code for adding the store to the app,
 
