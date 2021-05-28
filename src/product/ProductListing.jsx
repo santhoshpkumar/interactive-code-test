@@ -20,7 +20,6 @@ export default function ProductListing() {
             productsList = productsList.filter((product) => {
                 return product.productName.toLowerCase().includes(searchText.toLowerCase());
             });
-            setFilteredProducts(productsList);
         }
         setFilteredProducts(productsList);
     }, [searchText, products, filters]);

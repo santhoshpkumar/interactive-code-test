@@ -1,8 +1,8 @@
 /* eslint-disable require-jsdoc */
 import { FETCH_PRODUCTS, UPDATE_SEARCH_TEXT, UPDATE_FILTER } from './productActions';
-import productDate from './../api/data';
+import productData from './../api/data';
 
-const initialState = { products: productDate, filters: [], searchText: '' };
+const initialState = { products: productData, filters: [], searchText: '' };
 
 export default function productReducer(state = initialState, { type, payload }) {
     switch (type) {
